@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volleyball Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- START -->
+  <section id="start" class="screen start">
+    <button id="enterBtn" class="enter-btn">계약</button>
+  </section>
+
+  <!-- LOADING -->
+  <section id="loading" class="screen loading hidden">
+    <div class="loading-box">
+      <div class="loading-bar">
+        <div class="loading-fill"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main id="main" class="screen main hidden">
+
+    <!-- ✅ URL 이미지 (여기 2개만 바꾸면 됨) -->
+    <a class="url-banner" href="https://example.com" target="_blank" rel="noopener">
+      <img src="https://example.com/banner.png" alt="">
+    </a>
+
+    <!-- ✅ 6명 포메이션 (OH/MB/S / OH/L/MB) -->
+    <section class="formation">
+      <!-- 앞줄 -->
+      <button class="slot front-left" data-key="a">
+        <img class="thumb" src="a.png" alt="">
+        <div class="pos">아웃사이드 히터 (OH)</div>
+      </button>
+
+      <button class="slot front-center" data-key="b">
+        <img class="thumb" src="b.png" alt="">
+        <div class="pos">미들 블로커 (MB)</div>
+      </button>
+
+      <button class="slot front-right" data-key="c">
+        <img class="thumb" src="c.png" alt="">
+        <div class="pos">세터 (S)</div>
+      </button>
+
+      <!-- 뒷줄 -->
+      <button class="slot back-left" data-key="d">
+        <img class="thumb" src="d.png" alt="">
+        <div class="pos">아웃사이드 히터 (OH)</div>
+      </button>
+
+      <button class="slot back-center" data-key="e">
+        <img class="thumb" src="e.png" alt="">
+        <div class="pos">리베로 (L)</div>
+      </button>
+
+      <button class="slot back-right" data-key="f">
+        <img class="thumb" src="f.png" alt="">
+        <div class="pos">미들 블로커 (MB)</div>
+      </button>
+    </section>
+
+    <!-- ✅ POPUP -->
+    <section id="modal" class="modal hidden">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+
+      <div class="modal-card">
+        <button class="close" id="closeModal" aria-label="close">✕</button>
+
+        <!-- 4장 이미지 -->
+        <div class="gallery">
+          <img id="g1" alt="">
+          <img id="g2" alt="">
+          <img id="g3" alt="">
+          <img id="g4" alt="">
+        </div>
+
+        <!-- 캐릭터 정보 공간 -->
+        <div class="info" id="infoBox"></div>
+      </div>
+    </section>
+
+    <!-- ✅ BGM -->
+    <audio id="bgm" src="bgm.mp3" loop></audio>
+
+    <!-- ✅ BGM 컨트롤 -->
+    <div class="bgm-ui">
+      <button id="bgmToggle" class="bgm-btn" aria-label="bgm toggle">⏯</button>
+      <input id="bgmVolume" class="bgm-slider" type="range" min="0" max="1" step="0.01" value="0.5" aria-label="bgm volume">
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
